@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD Application</title>
+        <link rel="stylesheet" href="Project1.css">
+    </head>
+    <body>
+        <div class="model" onclick="hidePopup(event)">
+            <div class="modeldata">
+                <div class="form">
+                    <form onsubmit="updateStudent(event)">
+                        <input type="text" placeholder="Name" id="upname" required />
+                        <input type="number" placeholder="Age" id="upage" required />
+                        <input type="text" placeholder="city" id="upcity" required />
+                        <input type="text" placeholder="Height" id="upheight" required />
+                        <button type="submit">Update Student</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="data">
+            <h1 style="text-align: center;">Students Database</h1>
+
+            <div class="form">
+                <form onsubmit="addStudent(event)">
+                    <input type="text" placeholder="Name" id="name" required />
+                    <input type="number" placeholder="Age" id="age" required />
+                    <input type="text" placeholder="city" id="city" required />
+                    <input type="text" placeholder="Height" id="height" required />
+                    <button type="submit">Add Student</button>
+                </form>
+            </div>
+
+            <div class="form">
+                <input type="text" placeholder="Search by Name" onkeyup="searchByName()" id="searchvalue"/>
+            </div>
+            <table border="1" class="table" cellspacing=0>
+                <thead>
+                    <tr>
+                        <th>Sr no</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                        <th>Height</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="tdata" id="tdata">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Scarlet</td>
+                        <td>23</td>
+                        <td>Earth</td>
+                        <td>5.4</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        
+        <script src="Project1.js" type="text/javascript"></script>
+    </body>
+</html>
